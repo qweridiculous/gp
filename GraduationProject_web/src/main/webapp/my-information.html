@@ -1,0 +1,304 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>个人信息</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cusom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Main wrapper -->
+<div class="wrapper" id="wrapper">
+
+    <!-- Header -->
+    <header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+    </header>
+    <!-- //Header -->
+    <!-- Start Search Popup -->
+    <div class="box-search-content search_active block-bg close__top">
+        <form id="search_mini_form" class="minisearch" action="#">
+            <div class="field__search">
+                <input type="text" placeholder="Search entire store here...">
+                <div class="action">
+                    <a href="#"><i class="zmdi zmdi-search"></i></a>
+                </div>
+            </div>
+        </form>
+        <div class="close__wrap">
+            <span>close</span>
+        </div>
+    </div>
+    <!-- End Search Popup -->
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area bg-image--4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">个人信息</h2>
+                        <nav class="bradcaump-content">
+                            <a class="breadcrumb_item" href="index.html">首页</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb_item active">个人信息</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <!-- Start main Content -->
+    <div class="maincontent bg--white pt--80 pb--55">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="product__info__detailed">
+                        <div class="pro_details_nav nav justify-content-start" role="tablist">
+                            <a class="nav-item nav-link active" id="my_info_tab" data-toggle="tab" href="#nav-details"
+                               role="tab">个人信息</a>
+                            <a class="nav-item nav-link" id="my_book_tab" data-toggle="tab" href="#nav-review" role="tab">我的商品</a>
+                        </div>
+                        <div class="tab__container">
+                            <!-- Start Single Tab Content -->
+                            <div class="pro__tab_label tab-pane fade show active row" id="nav-details" role="tabpanel">
+                                <div class="col-lg-2"></div>
+                                <div class="description__attribute col-lg-8">
+                                    <div>
+                                        <div class="contact-form-wrap">
+                                            <form id="my_info_form">
+                                                <input type="hidden" id="id" name="id" value="">
+                                                <div class="single-contact-form">
+                                                    <label>用户名：</label>
+                                                    <input type="text" id="username" name="username" value="哈哈哈"
+                                                           readonly>
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>性别：</label>
+                                                    <select class="select__option" id="gender" disabled name="gender">
+                                                        <option value="不详">不详</option>
+                                                    </select>
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>学号：</label>
+                                                    <input type="text" id="studentNum" name="studentNum">
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>邮箱：</label>
+                                                    <input type="text" id="email" name="email">
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>手机号：</label>
+                                                    <input type="tel" id="phoneNum" name="phoneNum">
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>密码：</label>
+                                                    <input type="text" id="password" name="password">
+                                                </div>
+                                                <div class="single-contact-form">
+                                                    <label>院系：</label>
+                                                    <select class="select__option" id="major" disabled name="major">
+                                                        <option value="计算机科学与信息工程">计算机科学与信息工程学院</option>
+                                                    </select>
+                                                </div>
+                                                <div class="contact-btn">
+                                                    <button type="button" id="my_info_btn">保存</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Tab Content -->
+                            <!-- Start Single Tab Content -->
+                            <div class="pro__tab_label tab-pane fade" id="nav-review" role="tabpanel">
+                                <div class="table-content wnro__table table-responsive">
+                                    <table>
+                                        <thead>
+                                        <tr class="title-top">
+                                            <th class="product-thumbnail">图片</th>
+                                            <th class="product-name">书名</th>
+                                            <th class="product-price">价格</th>
+                                            <th class="product-subtotal">详情</th>
+                                            <th class="product-remove">下架</th>
+                                            <th class="product-remove">删除</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="my_books">
+                                        <tr>
+                                            <td class="product-thumbnail"><a ><img
+                                                    src="images/product/sm-3/1.jpg"
+                                                    alt="product img"></a></td>
+                                            <td class="product-name"><a >Natoque penatibus</a></td>
+                                            <td class="product-price"><span class="amount">$165.00</span></td>
+                                            <td class="product-subtotal"><a href="#">详情</a></td>
+                                            <td class="product-remove"><a href="#"> &mdash;</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img
+                                                    src="images/product/sm-3/2.jpg"
+                                                    alt="product img"></a></td>
+                                            <td class="product-name"><a href="#">Quisque fringilla</a></td>
+                                            <td class="product-price"><span class="amount">$50.00</span></td>
+                                            <td class="product-subtotal"><a href="#">详情</a></td>
+                                            <td class="product-remove"><a href="#"> &mdash;</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img
+                                                    src="images/product/sm-3/3.jpg"
+                                                    alt="product img"></a></td>
+                                            <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
+                                            <td class="product-price"><span class="amount">$50.00</span></td>
+                                            <td class="product-subtotal"><a href="#">详情</a></td>
+                                            <td class="product-remove"><a href="#" id="remove_my_book" > &mdash;</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- End Single Tab Content -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End main Content -->
+    <!-- Footer Area -->
+    <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+    </footer>
+    <!-- //Footer Area -->
+</div>
+<!-- //Main wrapper -->
+
+
+<!-- JS Files -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+<script src="js/getParameter.js"></script>
+<script src="js/include.js"></script>
+<script>
+    $(function () {
+        scrollTo(0,0);
+        $("#search_btn").click(function () {
+            var sname = $("#search_word").val();
+            var mid = getParameter("mid");
+            location.href = "/GraduationProject/book-list.html?mid=" + mid + "&sname=" + sname;
+        });
+        $.post("user/getUsername.do", function (data) {
+            if (data.username != null) {
+                $("#id").val(getParameter("id"));
+                $("#username").val(data.username);
+                $("#gender").html('<option value="' + data.gender + '">' + data.gender + '</option>');
+                $("#studentNum").val(data.studentNum);
+                $("#email").val(data.email);
+                $("#phoneNum").val(data.phoneNum);
+                $("#password").val(data.password);
+                $("#major").html('<option value="' + data.major + '">' + data.major + '</option>');
+            }
+        });
+        $.post("books/findByUid.do",{uid:getParameter("id")},function (data) {
+            var bookLis = '';
+            for (var i = 0; i < data.length; i ++){
+                if (data[i].offShelf==0){
+                    var bookLi = '<tr>\n' +
+                        '<td class="product-thumbnail"><a ><img\n' +
+                        'src="'+data[i].img+'"\n' +
+                        'alt="product img"></a></td>\n' +
+                        '<td class="product-name"><a >'+data[i].name+'</a></td>\n' +
+                        '<td class="product-price"><span class="amount">'+data[i].price+'</span></td>\n' +
+                        '<td class="product-subtotal"><a href="book_info.html?id='+data[i].id+'">详情</a></td>\n' +
+                        '<td class="product-remove"><a href="javascript:void(0);" onclick="setOffShelf('+data[i].id+')"> &mdash;</a></td>' +
+                        '<td class="product-remove"><a href="javascript:void(0);" onclick="deleteBook('+data[i].id+')">移除</a></td>\n' +
+                        '</tr>';
+                    bookLis += bookLi;
+                } else {
+                    var bookLi = '<tr>\n' +
+                        '<td class="product-thumbnail"><a ><img\n' +
+                        'src="'+data[i].img+'"\n' +
+                        'alt="product img"></a></td>\n' +
+                        '<td class="product-name"><a >'+data[i].name+'</a></td>\n' +
+                        '<td class="product-price"><span class="amount">'+data[i].price+'</span></td>\n' +
+                        '<td class="product-subtotal"><a href="javascript:void(0);" onclick="setOnShelf('+data[i].id+')">已下架，点击重新上架</a></td>\n' +
+                        '<td class="product-remove"><a href="javascript:void(0);" onclick="setOffShelf('+data[i].id+')"> &mdash;</a></td>' +
+                        '<td class="product-remove"><a href="javascript:void(0);" onclick="deleteBook('+data[i].id+')">移除</a></td>\n' +
+                        '</tr>';
+                    bookLis += bookLi;
+                }
+            }
+            $("#my_books").html(bookLis);
+        });
+        $("#my_info_btn").click(function () {
+            $.post("user/updateUser.do",$("#my_info_form").serialize(),function (data) {
+                if (data){
+                    alert("修改成功");
+                    location.reload();
+                }else {
+                    alert("修改失败");
+                }
+            })
+        })
+    })
+    function deleteBook(id) {
+        $.get("books/deleteBook.do",{id:id},function (data) {
+            if (data){
+                alert("删除成功");
+                location.reload();
+            } else {
+                alert("删除失败");
+            }
+        })
+    }
+    function setOffShelf(id) {
+        $.get("books/setOffShelf.do",{id:id},function (data) {
+            if (data){
+                alert("下架成功");
+                location.reload();
+            } else {
+                alert("下架失败");
+            }
+        })
+    }
+    function setOnShelf(id) {
+        $.get("books/setOnShelf.do",{id:id},function (data) {
+            if (data){
+                alert("上架成功");
+                location.reload();
+            } else {
+                alert("上架失败");
+            }
+        })
+    }
+</script>
+</body>
+</html>

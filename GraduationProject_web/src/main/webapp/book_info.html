@@ -1,0 +1,235 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>上架书籍</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cusom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Main wrapper -->
+<div class="wrapper" id="wrapper">
+
+    <!-- Header -->
+    <header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+
+    </header>
+    <!-- //Header -->
+    <div id="wn_search" class="brown--color box-search-content search_active block-bg close__top">
+        <form id="search_mini_form" class="minisearch" action="#">
+            <div class="field__search">
+                <input id="search_word" type="text" placeholder="Search entire store here...">
+                <div class="action">
+                    <a id="search_btn"><i class="zmdi zmdi-search"></i></a>
+                </div>
+            </div>
+        </form>
+        <div class="close__wrap">
+            <span>close</span>
+        </div>
+    </div>
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area bg-image--6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">上架书籍</h2>
+                        <nav class="bradcaump-content">
+                            <a class="breadcrumb_item" href="index.html">首页</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb_item active">上架书籍</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <!-- Start Contact Area -->
+    <section class="wn_contact_area bg--white pt--80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12">
+                    <div class="contact-form-wrap">
+                        <h2 class="contact__title">书籍信息</h2>
+                        <form id="update_book_form" method="post" enctype="multipart/form-data">
+                            <input id="id" type="hidden" name="id" value="">
+                            <input id="uid" type="hidden" name="uid" value="">
+                            <div class="single-contact-form space-between">
+                                <input type="text" id="name" name="name" readonly placeholder="书籍名称">
+                                <input type="text" id="price" name="price" placeholder="价格">
+                            </div>
+                            <div class="single-contact-form">
+                                <label>请选择类别：</label>
+                                <select class="select__option" disabled id="mid" name="mid">
+                                    <option value="1" id="1">计算机科学与信息工程学院</option>
+                                    <option value="2" id="2" selected>机械工程学院</option>
+                                    <option value="3" id="3">电子信息与电气工程学院</option>
+                                    <option value="4" id="4">土木与建筑工程学院</option>
+                                    <option value="5" id="5">化学与环境工程学院</option>
+                                    <option value="6" id="6">材料科学与工程学院</option>
+                                    <option value="7" id="7">生物与食品工程学院</option>
+                                    <option value="8" id="8">文法学院</option>
+                                    <option value="9" id="9">经管学院</option>
+                                    <option value="10" id="10">外国语学院</option>
+                                    <option value="11" id="11">艺术设计学院</option>
+                                    <option value="12" id="12">数学与信息科学学院</option>
+                                    <option value="13" id="13">飞行学院</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>增添图片：</label>
+                                <input type="file" id="files" name="files" multiple="multiple">
+                            </div>
+                            <br>
+                            <div class="single-contact-form message">
+                                <textarea id="introduce" name="introduce" placeholder="请输入商品介绍"></textarea>
+                            </div>
+                            <div class="contact-btn">
+                                <button type="button" id="update_book_btn">修改</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <table>
+                        <thead>
+                        <tr class="title-top">
+                            <th class="product-thumbnail">图片</th>
+                            <th class="product-name">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="my_book_img">
+                        <tr>
+                            <td class="product-thumbnail"><a><img
+                                    src="images/product/sm-3/1.jpg"
+                                    alt="product img"></a></td>
+                            <td class="product-remove"><a href="#"> 移除</a></td>
+                        </tr>
+                        <tr>
+                            <td class="product-thumbnail"><a><img
+                                    src="images/product/sm-3/1.jpg"
+                                    alt="product img"></a></td>
+                            <td class="product-remove"><a href="#"> 移除</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Contact Area -->
+    <br>
+    <!-- Footer Area -->
+    <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+    </footer>
+    <!-- //Footer Area -->
+
+</div>
+<!-- //Main wrapper -->
+
+<!-- JS Files -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+<script type="text/javascript" src="js/include.js"></script>
+<script src="js/getParameter.js"></script>
+<script>
+    function deleteImg(id, fileNames) {
+        $.post("images/deleteImgData.do", {id: id}, function (data) {
+            if (data) {
+                $.post("books/deleteImg.do", {fileNames: fileNames}, function (data) {
+                    if (data) {
+                        $("#img_" + id).remove();
+                    }
+                })
+            }
+        })
+    }
+    $(function () {
+        $("#uid").attr("value", getParameter("id"));
+        $("#search_btn").click(function () {
+            var sname = $("#search_word").val();
+            var mid = getParameter("mid");
+            location.href = "/GraduationProject/book-list.html?mid=" + mid + "&sname=" + sname;
+        });
+        $.post("books/findById.do", {id: getParameter("id")}, function (data) {
+            $("#id").val(data.id);
+            $("#name").val(data.name);
+            $("#price").val(data.price);
+            $('#' + data.mid).attr("selected", "selected");
+            $("#introduce").val(data.introduce);
+            /*<tr>
+                            <td class="product-thumbnail"><a><img
+                                    src="images/product/sm-3/1.jpg"
+                                    alt="product img"></a></td>
+                            <td class="product-remove"><a href="#"> 移除</a></td>
+                        </tr>*/
+            var imgTrs = '';
+            for (var i = 0; i < data.imgs.length; i++) {
+                var id = data.imgs[i].id;
+                var fileNames = data.imgs[i].img;
+                var imgTr = '<tr id="img_' + data.imgs[i].id + '">\n' +
+                    '<td class="product-thumbnail"><a><img width="150px" \n' +
+                    'src="' + data.imgs[i].img + '"\n' +
+                    'alt="product img"></a></td>\n' +
+                    '<td class="product-remove"><a href="javascript:void(0);" onclick="deleteImg(' + id + ',\'' + fileNames + '\')"> 移除</a></td>\n' +
+                    '</tr>';
+                imgTrs += imgTr;
+            }
+            $("#my_book_img").html(imgTrs);
+        });
+        $("#update_book_btn").click(function () {
+            var form = new FormData(document.getElementById("update_book_form"))
+            $.ajax({
+                url: "/GraduationProject/books/updateBook.do",
+                data: form,
+                type: "post",
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if (data) {
+                        alert("修改成功");
+                        location.reload();
+                    } else {
+                        alert("修改失败");
+                    }
+                }
+            })
+        })
+    })
+
+</script>
+</body>
+</html>

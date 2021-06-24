@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>登录</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cusom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Main wrapper -->
+<div class="wrapper" id="wrapper">
+    <!-- Header -->
+    <!-- Header -->
+    <header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+
+    </header>
+    <!-- //Header -->
+    <div id="wn_search" class="brown--color box-search-content search_active block-bg close__top">
+        <form id="search_mini_form" class="minisearch" action="#">
+            <div class="field__search">
+                <input id="search_word" type="text" placeholder="Search entire store here...">
+                <div class="action">
+                    <a id="search_btn"><i class="zmdi zmdi-search"></i></a>
+                </div>
+            </div>
+        </form>
+        <div class="close__wrap">
+            <span>close</span>
+        </div>
+    </div>
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area bg-image--6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">登录</h2>
+                        <nav class="bradcaump-content">
+                            <a class="breadcrumb_item" href="index.html">Home</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb_item active">登录</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <!-- Start My Account Area -->
+    <section class="my_account_area pt--80 pb--55 bg--white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="my__account__wrapper">
+                        <h3 class="account__title">Login</h3>
+                        <form id="loginForm">
+                            <div class="account__form">
+                                <div class="input__box">
+                                    <label>用户名：</label>
+                                    <input type="text" id="username" name="username">
+                                </div>
+                                <div class="input__box">
+                                    <label>密码：</label>
+                                    <input type="password" id="password" name="password">
+                                </div>
+                                <div class="input__box">
+                                    <label>验证码：</label>
+                                    <input type="text" id="checkcode" name="checkcode">
+                                    <img src="/GraduationProject/checkcode.do" id="checkcode_img" height="32px" onclick="changeCheckCode(this)">
+                                    <script>
+                                        //图片点击事件
+                                        function changeCheckCode(img) {
+                                            img.src = "checkcode.do?" + new Date().getTime();
+                                        }
+                                    </script>
+                                </div>
+                                <div class="form__btn">
+                                    <button type="button" id="btn_login">登录</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End My Account Area -->
+    <!-- Footer Area -->
+    <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+
+    </footer>
+    <!-- //Footer Area -->
+
+</div>
+<!-- //Main wrapper -->
+
+<!-- JS Files -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+<script type="text/javascript" src="js/include.js"></script>
+<script>
+    $(function () {
+        $("#btn_login").click(function () {
+            if (checkUsername() && checkPassword()){
+                $.post("user/login.do",$("#loginForm").serialize(),function (data) {
+                    if (data.flag){
+                        location.href="index.html";
+                    }else {
+                        $("#checkcode_img").prop("src", "checkcode.do?" + new Date().getTime());
+                        alert(data.msg);
+                    }
+                })
+            }
+        })
+
+        $("#username").blur(checkUsername);
+        $("#password").blur(checkPassword);
+    })
+    function checkUsername() {
+        var val = $("#username").val();
+        var reg_username = /^\w{8,20}$/;
+        var flag = reg_username.test(val);
+        if (flag){
+            $("#username").css("border", "");
+        }else {
+            $("#username").css("border", "1px solid red");
+        }
+        return flag;
+    }
+    function checkPassword() {
+        var val = $("#password").val();
+        var reg_password = /^\w{6,20}$/;
+        var flag = reg_password.test(val);
+        if (flag) {
+            $("#password").css("border", "");
+        }else {
+            $("#password").css("border", "1px solid red");
+        }
+        return flag;
+    }
+</script>
+<script>
+    $(function () {
+        $("#search_btn").click(function () {
+            var sname = $("#search_word").val();
+            var mid = getParameter("mid");
+            location.href = "/GraduationProject/book-list.html?mid="+mid+"&sname="+sname;
+        })
+    })
+</script>
+</body>
+</html>

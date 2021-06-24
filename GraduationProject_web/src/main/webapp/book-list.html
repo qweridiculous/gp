@@ -1,0 +1,392 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>图书列表</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cusom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Main wrapper -->
+<div class="wrapper" id="wrapper">
+
+    <!-- Header -->
+    <header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+
+    </header>
+    <!-- //Header -->
+    <div id="wn_search" class="brown--color box-search-content search_active block-bg close__top">
+        <form id="search_mini_form" class="minisearch" action="#">
+            <div class="field__search">
+                <input id="search_word" type="text" placeholder="Search entire store here...">
+                <div class="action">
+                    <a id="search_btn"><i class="zmdi zmdi-search"></i></a>
+                </div>
+            </div>
+        </form>
+        <div class="close__wrap">
+            <span>close</span>
+        </div>
+    </div>
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area bg-image--4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">图书列表</h2>
+                        <nav class="bradcaump-content">
+                            <a class="breadcrumb_item" href="index.html">首页</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb_item active">列表</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <!-- Start List Page -->
+    <section class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="shop__list__wrapper d-flex flex-wrap flex-md-nowrap justify-content-between">
+                                <div class="shop__list nav justify-content-center" role="tablist">
+                                    <a class="nav-item nav-link active" data-toggle="tab" href="#nav-grid" role="tab"><i
+                                            class="fa fa-th"></i></a>
+                                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-list" role="tab"><i
+                                            class="fa fa-list"></i></a>
+                                </div>
+                                <p id="page_msg"></p>
+                                <!--                                显示40个结果中的1-12个-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab__container">
+                        <div class="shop-grid tab-pane fade show active" id="nav-grid" role="tabpanel">
+                            <div class="row" id="hor_list">
+                                <!-- Start Single Product -->
+                                <!--                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                                                                    <div class="product">
+                                                                        <div class="product__thumb">
+                                                                            <a class="first__img" href="book-detail.html"><img
+                                                                                    src="images/product/1.jpg" alt="书籍图片"></a>
+                                &lt;!&ndash;                                            <a class="second__img animation1" href="book-detail.html"><img
+                                                                                    src="images/product/2.jpg" alt="product image"></a>&ndash;&gt;
+                                                                            <ul class="prize position__right__bottom d-flex">
+                                                                                <li>$40.00</li>
+                                &lt;!&ndash;                                                <li class="old_prize">$55.00</li>&ndash;&gt;
+                                                                            </ul>
+
+                                                                        </div>
+                                                                        <div class="product__content">
+                                                                            <h4><a href="book-detail.html">Strive Shoulder Pack</a></h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
+                                <!-- End Single Product -->
+                            </div>
+                            <ul class="wn__pagination" id="page_num">
+                                <!--<li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>-->
+                            </ul>
+                        </div>
+                        <div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
+                            <div class="list__view__wrapper">
+                                <!-- Start Single Product -->
+                                <div class="list__view">
+                                    <div class="thumb">
+                                        <a class="first__img" href="book-detail.html"><img src="images/product/1.jpg"
+                                                                                           alt="product images"></a>
+                                        <a class="second__img animation1" href="book-detail.html"><img
+                                                src="images/product/2.jpg" alt="product images"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h2><a href="book-detail.html">adipiscing</a></h2>
+                                        <ul class="rating d-flex">
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                        <ul class="prize__box">
+                                            <li>$111.00</li>
+                                            <li class="old__prize">$220.00</li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
+                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
+                                            adipiscing cursus eu, suscipit id nulla.</p>
+                                        <ul class="cart__action d-flex">
+                                            <li class="cart"><a href="cart.html">Add to cart</a></li>
+                                            <li class="wishlist"><a href="cart.html"></a></li>
+                                            <li class="compare"><a href="cart.html"></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!-- End Single Product -->
+                                <!-- Start Single Product -->
+                                <div class="list__view mt--40">
+                                    <div class="thumb">
+                                        <a class="first__img" href="book-detail.html"><img src="images/product/2.jpg"
+                                                                                           alt="product images"></a>
+                                        <a class="second__img animation1" href="book-detail.html"><img
+                                                src="images/product/4.jpg" alt="product images"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h2><a href="book-detail.html">Voyage Yoga Bag</a></h2>
+                                        <ul class="rating d-flex">
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                        <ul class="prize__box">
+                                            <li>$111.00</li>
+                                            <li class="old__prize">$220.00</li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
+                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
+                                            adipiscing cursus eu, suscipit id nulla.</p>
+                                        <ul class="cart__action d-flex">
+                                            <li class="cart"><a href="cart.html">Add to cart</a></li>
+                                            <li class="wishlist"><a href="cart.html"></a></li>
+                                            <li class="compare"><a href="cart.html"></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!-- End Single Product -->
+                                <!-- Start Single Product -->
+                                <div class="list__view mt--40">
+                                    <div class="thumb">
+                                        <a class="first__img" href="book-detail.html"><img src="images/product/3.jpg"
+                                                                                           alt="product images"></a>
+                                        <a class="second__img animation1" href="book-detail.html"><img
+                                                src="images/product/6.jpg" alt="product images"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h2><a href="book-detail.html">Impulse Duffle</a></h2>
+                                        <ul class="rating d-flex">
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                        <ul class="prize__box">
+                                            <li>$111.00</li>
+                                            <li class="old__prize">$220.00</li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
+                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
+                                            adipiscing cursus eu, suscipit id nulla.</p>
+                                        <ul class="cart__action d-flex">
+                                            <li class="cart"><a href="cart.html">Add to cart</a></li>
+                                            <li class="wishlist"><a href="cart.html"></a></li>
+                                            <li class="compare"><a href="cart.html"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Single Product -->
+                                <!-- Start Single Product -->
+                                <div class="list__view mt--40">
+                                    <div class="thumb">
+                                        <a class="first__img" href="book-detail.html"><img src="images/product/4.jpg"
+                                                                                           alt="product images"></a>
+                                        <a class="second__img animation1" href="book-detail.html"><img
+                                                src="images/product/6.jpg" alt="product images"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h2><a href="book-detail.html">Strive Shoulder Pack</a></h2>
+                                        <ul class="rating d-flex">
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                        <ul class="prize__box">
+                                            <li>$111.00</li>
+                                            <li class="old__prize">$220.00</li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
+                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
+                                            adipiscing cursus eu, suscipit id nulla.</p>
+                                        <ul class="cart__action d-flex">
+                                            <li class="cart"><a href="cart.html">Add to cart</a></li>
+                                            <li class="wishlist"><a href="cart.html"></a></li>
+                                            <li class="compare"><a href="cart.html"></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!-- End Single Product -->
+                                <!-- Start Single Product -->
+                                <div class="list__view mt--40">
+                                    <div class="thumb">
+                                        <a class="first__img" href="book-detail.html"><img src="images/product/5.jpg"
+                                                                                           alt="product images"></a>
+                                        <a class="second__img animation1" href="book-detail.html"><img
+                                                src="images/product/9.jpg" alt="product images"></a>
+                                    </div>
+                                    <div class="content">
+                                        <h2><a href="book-detail.html">Strive Shoulder Pack</a></h2>
+                                        <ul class="rating d-flex">
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li class="on"><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                            <li><i class="fa fa-star-o"></i></li>
+                                        </ul>
+                                        <ul class="prize__box">
+                                            <li>$111.00</li>
+                                            <li class="old__prize">$220.00</li>
+                                        </ul>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue
+                                            nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi
+                                            ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate
+                                            adipiscing cursus eu, suscipit id nulla.</p>
+                                        <ul class="cart__action d-flex">
+                                            <li class="cart"><a href="cart.html">Add to cart</a></li>
+                                            <li class="wishlist"><a href="cart.html"></a></li>
+                                            <li class="compare"><a href="cart.html"></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!-- End Single Product -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Shop Page -->
+    <!-- Footer Area -->
+    <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+
+    </footer>
+    <!-- //Footer Area -->
+
+</div>
+<!-- //Main wrapper -->
+
+<!-- JS Files -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/active.js"></script>
+<script type="text/javascript" src="js/include.js"></script>
+<script src="js/getParameter.js"></script>
+<script>
+    $(function () {
+        var mid = getParameter("mid");
+        var sname = getParameter("sname");
+        load(mid, null, sname);
+    })
+
+    function load(mid, currentPage, sname) {
+        $.get("books/findAll.do", {mid: mid, currentPage: currentPage, sname: sname}, function (data) {
+            $("#page_msg").html('显示' + data.total + '个结果中的' + data.startRow + '-' + data.endRow + '个')
+
+            var bookLis = '';
+            for (var i = 0; i < data.list.length; i++) {
+                var book = data.list[i];
+                if (book.offShelf == 0) {
+                    var bookLi = '<div class="col-lg-4 col-md-4 col-sm-6 col-12">\n' +
+                        '                                    <div class="product">\n' +
+                        '                                        <div class="product__thumb">\n' +
+                        '                                            <a class="first__img" href="book-detail.html?id=' + book.id + '"><img\n' +
+                        '                                                    src="' + book.img + '" alt="书籍图片"></a>\n' +
+                        '<!--                                            <a class="second__img animation1" href="book-detail.html"><img\n' +
+                        '                                                    src="images/product/2.jpg" alt="product image"></a>-->\n' +
+                        '                                            <ul class="prize position__right__bottom d-flex">\n' +
+                        '                                                <li>&yen;' + book.price + '</li>\n' +
+                        '<!--                                                <li class="old_prize">$55.00</li>-->\n' +
+                        '                                            </ul>\n' +
+                        '\n' +
+                        '                                        </div>\n' +
+                        '                                        <div class="product__content">\n' +
+                        '                                            <h4><a href="book-detail.html?id=' + book.id + '">' + book.name + '</a></h4>\n' +
+                        '                                        </div>\n' +
+                        '                                    </div>\n' +
+                        '                                </div>';
+                    bookLis += bookLi;
+                }
+            }
+            $("#hor_list").html(bookLis);
+
+            pageLis = '';
+            for (var i = 1; i <= data.pages; i++) {
+                var pageLi = '';
+                if (data.pageNum == i) {
+                    pageLi += '<li class="active"><a onclick="load(' + mid + ',' + i + ',' + sname + ')">' + i + '</a></li>';
+                } else {
+                    pageLi += '<li><a onclick="load(' + mid + ',' + i + ',' + sname + ')">' + i + '</a></li>';
+                }
+                pageLis += pageLi;
+            }
+            $("#page_num").html(pageLis);
+            window.scrollTo(0, 0);
+        })
+    }
+</script>
+<script>
+    $(function () {
+        $("#search_btn").click(function () {
+            var sname = $("#search_word").val();
+            var mid = getParameter("mid");
+            location.href = "/GraduationProject/book-list.html?mid=" + mid + "&sname=" + sname;
+        })
+    })
+</script>
+</body>
+</html>
